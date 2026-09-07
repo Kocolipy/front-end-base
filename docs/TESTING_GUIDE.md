@@ -2,19 +2,20 @@
 
 ## Running the suites
 
-| Command                 | What it runs                                          | Typical use                        |
-| ----------------------- | ----------------------------------------------------- | ---------------------------------- |
-| `npm test`              | vitest, single pass, everything but `test/e2e`        | after every change                 |
-| `npm run test:watch`    | vitest in watch mode                                  | while writing a test               |
-| `npm test <path>`       | one file                                              | narrowing a failure                |
-| `npm test -- -t "name"` | one test by name                                      | narrowing further                  |
-| `npm run typecheck`     | `tsc -b` over all three projects                      | after every change                 |
-| `npm run test:arch`     | dependency-cruiser + `test/arch`                      | after every change                 |
-| `npm run test:coverage` | vitest with v8 coverage                               | checking a gap, not a gate         |
-| `npm run test:e2e`      | Playwright against `npm run dev`                      | once an implementation is complete |
-| `npm run test:security` | Semgrep, local ruleset                                | once an implementation is complete |
-| `npx fallow audit`      | dead code / complexity / duplication in the changeset | once an implementation is complete |
-| `npm run test:mutation` | Stryker over the whole repo                           | CI only                            |
+| Command                 | What it runs                                          | Typical use                           |
+| ----------------------- | ----------------------------------------------------- | ------------------------------------- |
+| `npm test`              | vitest, single pass, everything but `test/e2e`        | after every change                    |
+| `npm run test:watch`    | vitest in watch mode                                  | while writing a test                  |
+| `npm test <path>`       | one file                                              | narrowing a failure                   |
+| `npm test -- -t "name"` | one test by name                                      | narrowing further                     |
+| `npm run typecheck`     | `tsc -b` over all three projects                      | after every change                    |
+| `npm run test:arch`     | dependency-cruiser + `test/arch`                      | after every change                    |
+| `npm run test:coverage` | vitest with v8 coverage                               | checking a gap, not a gate            |
+| `npm run test:e2e`      | Playwright against `npm run dev`                      | once an implementation is complete    |
+| `npm run test:security` | Semgrep, local ruleset                                | once an implementation is complete    |
+| `npx fallow audit`      | dead code / complexity / duplication in the changeset | once an implementation is complete    |
+| `npm run test:mutation` | Stryker over the whole repo                           | CI only                               |
+| scoped Stryker          | Stryker over the source one test covers               | after writing or changing a unit test |
 
 The three levels — baseline, full, extensive — and which one to run where are
 in AGENTS.md.
@@ -35,6 +36,11 @@ project that includes them. `tsconfig.json` excludes `*.test.*` and
 the production project exactly as `*.test.*` is, and is deliberately **not**
 `*.helpers.ts(x)` — that name is reserved for production helpers, which stay
 inside the `cq-no-devdep-in-prod` dependency rule.
+
+**A unit test — new or changed — is not finished until scoped Stryker confirms
+it kills mutants in the code it covers.** A weakened assertion still passes, and
+still counts as covered; Stryker is the only gate that notices. That is how the
+trap below was found. The command is under Mutation testing.
 
 ### Assert exactly, not loosely
 
@@ -105,11 +111,18 @@ rm src/lib/violation.ts test/e2e/unrouted.spec.ts
 ## Mutation testing
 
 `npm run test:mutation` runs Stryker over the whole repo — CI only, far too
-slow for an implementation loop. Scope it while working:
+slow for an implementation loop. The in-loop run is scoped, and `--mutate` names
+the **source** the test covers, never the test file:
 
 ```bash
 npx stryker run --mutate 'src/pages/**/*.tsx,!src/pages/**/*.test.tsx'
 ```
+
+A survivor means the test asserts too weakly to catch the bug it claims to
+cover. Strengthen the assertion and re-run until the mutant dies — a survivor
+you cannot kill is either a mutant with no observable effect, which belongs in
+the `mutate` exclusions with its reason, or a gap in what the test set out to
+prove.
 
 **The `--mutate` trap:** the flag _replaces_ the `mutate` array in
 `stryker.config.json`, it does not narrow it. A glob without the `!` negations

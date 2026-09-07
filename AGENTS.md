@@ -106,17 +106,20 @@ Two things the placeholders deliberately do not do: no `asChild` / Radix `Slot`
 | **full**      | baseline + `npm run test:e2e` + `npm run test:security` + `npx fallow audit` | Once an implementation is complete, to confirm the whole thing works.                                                                      |
 | **extensive** | full + `npm run test:mutation`                                               | CI only — a whole-repo Stryker run is far too slow to sit in an implementation loop.                                                       |
 
+Scoped Stryker sits outside these levels: it runs per unit test, not per
+changeset.
+
 The suite is small today, so the baseline runs in seconds; run it in the
 foreground. The ten-minute `timeout: 600000` habit is worth keeping anyway, so
 a growing suite never gets cut off mid-run.
 
-**Read `docs/TESTING_GUIDE.md`** before writing a unit test, adding an
-architecture rule, running scoped Stryker, suppressing a fallow finding, adding
-a file nothing imports, or writing or debugging an E2E spec. It has the
-per-command run table, the vitest setup and colocation rules, why the arch
-suite reads sources through `node:fs` rather than `import.meta.glob`, the
-Stryker `--mutate` trap, how a new Playwright spec gets routed, and the
-flakiness rules.
+**Read `docs/TESTING_GUIDE.md`** before writing or changing a unit test, adding
+an architecture rule, suppressing a fallow finding, adding a file nothing
+imports, or writing or debugging an E2E spec. It has the per-command run table,
+the vitest setup and colocation rules, the completion criterion a unit test has
+to meet, why the arch suite reads sources through `node:fs` rather than
+`import.meta.glob`, the Stryker `--mutate` trap, how a new Playwright spec gets
+routed, and the flakiness rules.
 
 ## Semgrep
 

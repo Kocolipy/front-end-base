@@ -1348,7 +1348,7 @@
       "node_kind": "heading",
       "norm_label": "fallow",
       "source_file": "AGENTS.md",
-      "source_location": "L141"
+      "source_location": "L144"
     },
     {
       "id": "agents_graphify",
@@ -1360,7 +1360,7 @@
       "node_kind": "heading",
       "norm_label": "graphify",
       "source_file": "AGENTS.md",
-      "source_location": "L178"
+      "source_location": "L181"
     },
     {
       "id": "agents_semgrep",
@@ -1372,7 +1372,7 @@
       "node_kind": "heading",
       "norm_label": "semgrep",
       "source_file": "AGENTS.md",
-      "source_location": "L121"
+      "source_location": "L124"
     },
     {
       "id": "agents_testing",
@@ -1396,7 +1396,7 @@
       "node_kind": "heading",
       "norm_label": "typescript",
       "source_file": "AGENTS.md",
-      "source_location": "L158"
+      "source_location": "L161"
     },
     {
       "id": "tsconfig",
@@ -3587,7 +3587,7 @@
       "node_kind": "heading",
       "norm_label": "architecture tests",
       "source_file": "docs/TESTING_GUIDE.md",
-      "source_location": "L58"
+      "source_location": "L64"
     },
     {
       "id": "docs_testing_guide_assert_exactly_not_loosely",
@@ -3599,7 +3599,7 @@
       "node_kind": "heading",
       "norm_label": "assert exactly, not loosely",
       "source_file": "docs/TESTING_GUIDE.md",
-      "source_location": "L39"
+      "source_location": "L45"
     },
     {
       "id": "docs_testing_guide_coverage_excludes_why_the_list_is_explicit",
@@ -3611,7 +3611,7 @@
       "node_kind": "heading",
       "norm_label": "coverage excludes \u2014 why the list is explicit",
       "source_file": "docs/TESTING_GUIDE.md",
-      "source_location": "L49"
+      "source_location": "L55"
     },
     {
       "id": "docs_testing_guide_e2e",
@@ -3623,7 +3623,7 @@
       "node_kind": "heading",
       "norm_label": "e2e",
       "source_file": "docs/TESTING_GUIDE.md",
-      "source_location": "L133"
+      "source_location": "L146"
     },
     {
       "id": "docs_testing_guide_fallow",
@@ -3635,7 +3635,7 @@
       "node_kind": "heading",
       "norm_label": "fallow",
       "source_file": "docs/TESTING_GUIDE.md",
-      "source_location": "L201"
+      "source_location": "L214"
     },
     {
       "id": "docs_testing_guide_flakiness_the_rules_that_keep_these_tests_green",
@@ -3647,7 +3647,7 @@
       "node_kind": "heading",
       "norm_label": "flakiness \u2014 the rules that keep these tests green",
       "source_file": "docs/TESTING_GUIDE.md",
-      "source_location": "L159"
+      "source_location": "L172"
     },
     {
       "id": "docs_testing_guide_mutation_testing",
@@ -3659,7 +3659,7 @@
       "node_kind": "heading",
       "norm_label": "mutation testing",
       "source_file": "docs/TESTING_GUIDE.md",
-      "source_location": "L105"
+      "source_location": "L111"
     },
     {
       "id": "docs_testing_guide_prove_a_new_rule_fails",
@@ -3671,7 +3671,7 @@
       "node_kind": "heading",
       "norm_label": "prove a new rule fails",
       "source_file": "docs/TESTING_GUIDE.md",
-      "source_location": "L93"
+      "source_location": "L99"
     },
     {
       "id": "docs_testing_guide_routing_a_new_spec",
@@ -3683,7 +3683,7 @@
       "node_kind": "heading",
       "norm_label": "routing a new spec",
       "source_file": "docs/TESTING_GUIDE.md",
-      "source_location": "L143"
+      "source_location": "L156"
     },
     {
       "id": "docs_testing_guide_running_the_suites",
@@ -3707,7 +3707,7 @@
       "node_kind": "heading",
       "norm_label": "semgrep",
       "source_file": "docs/TESTING_GUIDE.md",
-      "source_location": "L186"
+      "source_location": "L199"
     },
     {
       "id": "docs_testing_guide_testing_guide",
@@ -3731,7 +3731,7 @@
       "node_kind": "heading",
       "norm_label": "unit tests",
       "source_file": "docs/TESTING_GUIDE.md",
-      "source_location": "L22"
+      "source_location": "L23"
     },
     {
       "id": "docs_testing_guide_why_the_arch_suite_reads_sources_through_node_fs",
@@ -3743,7 +3743,7 @@
       "node_kind": "heading",
       "norm_label": "why the arch suite reads sources through `node:fs`",
       "source_file": "docs/TESTING_GUIDE.md",
-      "source_location": "L77"
+      "source_location": "L83"
     }
   ],
   "links": [
@@ -5206,7 +5206,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "AGENTS.md",
-      "source_location": "L121",
+      "source_location": "L124",
       "weight": 1.0
     },
     {
@@ -5217,7 +5217,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "AGENTS.md",
-      "source_location": "L141",
+      "source_location": "L144",
       "weight": 1.0
     },
     {
@@ -5228,7 +5228,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "AGENTS.md",
-      "source_location": "L158",
+      "source_location": "L161",
       "weight": 1.0
     },
     {
@@ -5239,7 +5239,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "AGENTS.md",
-      "source_location": "L178",
+      "source_location": "L181",
       "weight": 1.0
     },
     {
@@ -5646,7 +5646,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/TESTING_GUIDE.md",
-      "source_location": "L77",
+      "source_location": "L83",
       "weight": 1.0
     },
     {
@@ -5657,7 +5657,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/TESTING_GUIDE.md",
-      "source_location": "L93",
+      "source_location": "L99",
       "weight": 1.0
     },
     {
@@ -5668,7 +5668,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/TESTING_GUIDE.md",
-      "source_location": "L143",
+      "source_location": "L156",
       "weight": 1.0
     },
     {
@@ -5679,7 +5679,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/TESTING_GUIDE.md",
-      "source_location": "L159",
+      "source_location": "L172",
       "weight": 1.0
     },
     {
@@ -5690,7 +5690,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/TESTING_GUIDE.md",
-      "source_location": "L105",
+      "source_location": "L111",
       "weight": 1.0
     },
     {
@@ -5701,7 +5701,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/TESTING_GUIDE.md",
-      "source_location": "L133",
+      "source_location": "L146",
       "weight": 1.0
     },
     {
@@ -5712,7 +5712,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/TESTING_GUIDE.md",
-      "source_location": "L186",
+      "source_location": "L199",
       "weight": 1.0
     },
     {
@@ -5723,7 +5723,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/TESTING_GUIDE.md",
-      "source_location": "L201",
+      "source_location": "L214",
       "weight": 1.0
     },
     {
@@ -5734,7 +5734,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/TESTING_GUIDE.md",
-      "source_location": "L22",
+      "source_location": "L23",
       "weight": 1.0
     },
     {
@@ -5756,7 +5756,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/TESTING_GUIDE.md",
-      "source_location": "L58",
+      "source_location": "L64",
       "weight": 1.0
     },
     {
@@ -5767,7 +5767,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/TESTING_GUIDE.md",
-      "source_location": "L39",
+      "source_location": "L45",
       "weight": 1.0
     },
     {
@@ -5778,7 +5778,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/TESTING_GUIDE.md",
-      "source_location": "L49",
+      "source_location": "L55",
       "weight": 1.0
     },
     {
@@ -7584,5 +7584,6 @@
       "source_file": "test/.dependency-cruiser.cjs"
     }
   ],
-  "hyperedges": []
+  "hyperedges": [],
+  "built_at_commit": "39c98d93a05f30f8b6fd436da4e61d4831f7861b"
 }
