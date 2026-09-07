@@ -124,6 +124,16 @@ you cannot kill is either a mutant with no observable effect, which belongs in
 the `mutate` exclusions with its reason, or a gap in what the test set out to
 prove.
 
+The `mutation-testing` skill drives the run and triages the survivors. Two of
+its defaults disagree with the rule above, so pass them explicitly:
+
+```bash
+/mutation-testing --target=src/pages/home.tsx --threshold=100
+```
+
+`--scope=changed` covers the whole changeset rather than the source one test
+covers, and `--threshold=70` reports a pass with survivors still standing.
+
 **The `--mutate` trap:** the flag _replaces_ the `mutate` array in
 `stryker.config.json`, it does not narrow it. A glob without the `!` negations
 mutates the test files too, which produces nonsense survivors. Always carry the
